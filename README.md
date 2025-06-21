@@ -115,12 +115,3 @@ dataframe['rate'] = dataframe['rate'].apply(handleRate)
 plt.hist(dataframe['rate'], bins=5)
 plt.title('Ratings Distribution')
 plt.show()
-📃 Author
-Nakul Yadavpatil
-📧 [YourEmail@example.com]
-
-📌 Notes
-This project is intended for educational and analytical purposes.
-
-The sample dataset is based on publicly available data for demonstration.
-
