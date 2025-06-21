@@ -81,9 +81,7 @@ E. Online orders typically receive higher ratings compared to offline orders.
 ## How to Run the Project
 Install required libraries
 
-bash
-Copy
-Edit
+
 pip install pandas numpy matplotlib seaborn
 Download the dataset
 (Add your dataset link or upload instructions here)
@@ -92,13 +90,15 @@ Run the analysis in a Jupyter Notebook or Google Colab
 
 Execute the notebook step by step to view the data analysis and visualization outputs.
 
-📑 Example Code Snippet
-python
-Copy
-Edit
+![image](https://github.com/user-attachments/assets/501d5dc4-44ed-490a-a95f-e1b815a9ecc2)
+
+
 import pandas as pd
+
 import numpy as np
+
 import matplotlib.pyplot as plt
+
 import seaborn as sns  
 
 ### Load data
@@ -106,12 +106,16 @@ dataframe = pd.read_csv("Zomato data.csv")
 
 ### Convert 'rate' column to float
 def handleRate(value):
+
     value = str(value).split('/')
+    
     return float(value[0])
 
 dataframe['rate'] = dataframe['rate'].apply(handleRate)
 
 ### Plot ratings distribution
 plt.hist(dataframe['rate'], bins=5)
+
 plt.title('Ratings Distribution')
+
 plt.show()
